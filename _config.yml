@@ -10,9 +10,9 @@
 # site domain, full URL to the production location of your collection
 url: https:FisherLab-LMU.github.io
 # path to location on the domain if necessary e.g. /digital/hjccc
-baseurl: /roy-test 
+baseurl: /Church-of-the-Beloved-Disciple
 # location of code, the full url to your github repository
-source-code: https://github.com/FisherLab-LMU/roy-test
+source-code: https://github.com/FisherLab-LMU/Church-of-the-Beloved-Disciple
 
 ##########
 # SITE SETTINGS
