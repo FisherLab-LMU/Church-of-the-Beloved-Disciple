@@ -8,9 +8,9 @@
 # URL VARIABLES
 #
 # site domain, full URL to the production location of your collection
-url: https://fisherlab-lmu.github.io
+url: beloved-disciple.com
 # path to location on the domain if necessary e.g. /digital/hjccc
-baseurl: /church-of-the-beloved-disciple
+baseurl: 
 # location of code, the full url to your github repository
 source-code: https://github.com/fisherlab-LMU/church-of-the-beloved-disciple
 
