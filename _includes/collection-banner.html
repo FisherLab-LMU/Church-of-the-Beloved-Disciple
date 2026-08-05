@@ -5,14 +5,21 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: {{ site.data.theme.home-banner-image-position | default: 'center' }};
-    filter: brightness(1.18) contrast(1.03);
+    filter: brightness(1.00) contrast(1.05);
 }
 #home-title-box {
 padding: 0;
 }
     .hero-overlay {
-    background: transparent;
+   background: transparent;
     min-height: 55vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-top: 2.5rem;
 }
     .hero-overlay h1 {
   font-family: "Cormorant Garamond", serif;
@@ -25,12 +32,12 @@ padding: 0;
 
 .hero-overlay p {
  font-family: "Cormorant Garamond", serif;
-    font-size: 1.55rem;
+    font-size: 1.75rem;
     font-weight: 400;
     letter-spacing: .02em;
     max-width: 1100px;
     margin: 0 auto;
-    text-shadow: 0 2px 8px rgba(0,0,0,.35);
+    text-shadow: 0 3px 12px rgba(0,0,0,.55);
 }
 @media screen and (max-width: 576px) {
     .hero-overlay {
