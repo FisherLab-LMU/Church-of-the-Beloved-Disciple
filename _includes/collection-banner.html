@@ -7,8 +7,8 @@
     background-position: {{ site.data.theme.home-banner-image-position | default: 'center' }};
 }
 #home-title-box {
-    padding-top: {{ site.data.theme.home-title-y-padding | default: '5em' }};
-    padding-bottom: {{ site.data.theme.home-title-y-padding | default: '5em' }};
+    padding-top: 16em;
+    padding-bottom: 3em;
 }
     .hero-overlay {
     background: linear-gradient(
@@ -19,8 +19,8 @@
 }
 @media screen and (max-width: 576px) {
     #home-title-box {
-        padding-top: min({{ site.data.theme.home-title-y-padding | default: '5em' }}, 32vh);
-        padding-bottom: min({{ site.data.theme.home-title-y-padding | default: '5em' }}, 32vh);
+        padding-top: 10em;
+padding-bottom: 2em;
     }
 }
 </style>
