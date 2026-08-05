@@ -5,18 +5,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: {{ site.data.theme.home-banner-image-position | default: 'center' }};
+    filter: brightness(1.35) contrast(0.95);
 }
 #home-title-box {
-    padding-top: 1em;
-    padding-bottom: 11em;
+padding: 0;
 }
     .hero-overlay {
     background: transparent;
-    );
-}
-    .hero-overlay h1,
-.hero-overlay p {
-    text-shadow: 0 2px 10px rgba(0,0,0,.55);
+    min-height: 55vh;
 }
     .hero-overlay h1 {
   font-family: "Cormorant Garamond", serif;
@@ -35,17 +31,26 @@
     margin: 0 auto;
 }
 @media screen and (max-width: 576px) {
-    #home-title-box {
-        padding-top: 1.25em;
-        padding-bottom: 12em;
+    .hero-overlay {
+        min-height: 45vh;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.2rem;
     }
 }
 </style>
 <div id="home-banner" class="container-fluid mb-0 p-0">
-    <div id="home-title-box" class="position-relative" >
-        <div class="hero-overlay pt-2 pb-2 text-center text-white">
+    <div id="home-title-box" class="position-relative d-flex">
+        <div class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center text-white">
             <h1 class="display-4 mb-2">{{ site.title }}</h1>
-            {% if site.tagline %}<p class="lead mb-0">{{ site.tagline }}</p>{% endif %}
+            {% if site.tagline %}
+            <p class="mb-0">{{ site.tagline }}</p>
+            {% endif %}
         </div>
     </div>
 </div>
