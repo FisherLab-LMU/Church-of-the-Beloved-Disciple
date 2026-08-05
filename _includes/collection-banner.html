@@ -7,38 +7,44 @@
     background-position: {{ site.data.theme.home-banner-image-position | default: 'center' }};
 }
 #home-title-box {
-    padding-top: 2em;
-    padding-bottom: 10em;
+    padding-top: 1em;
+    padding-bottom: 11em;
 }
     .hero-overlay {
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.08),
-        rgba(0,0,0,0.40)
+    background: transparent;
     );
 }
+    .hero-overlay h1,
+.hero-overlay p {
+    text-shadow: 0 2px 10px rgba(0,0,0,.55);
+}
     .hero-overlay h1 {
-    font-family: "Cormorant Garamond", serif;
+  font-family: "Cormorant Garamond", serif;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    font-size: 3.6rem;
+    line-height: 1.05;
+    letter-spacing: .01em;
 }
 
 .hero-overlay p {
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 1.3rem;
-    letter-spacing: 0.03em;
+ font-family: "Source Sans 3", sans-serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+    letter-spacing: .02em;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 @media screen and (max-width: 576px) {
     #home-title-box {
-        padding-top: 2.5em;
-        padding-bottom: 17em;
+        padding-top: 1.25em;
+        padding-bottom: 12em;
     }
 }
 </style>
 <div id="home-banner" class="container-fluid mb-0 p-0">
     <div id="home-title-box" class="position-relative" >
-        <div class="hero-overlay p-5 text-center text-white">
-            <h1 class="display-3 mb-2">{{ site.title }}</h1>
+        <div class="hero-overlay pt-2 pb-2 text-center text-white">
+            <h1 class="display-4 mb-2">{{ site.title }}</h1>
             {% if site.tagline %}<p class="lead mb-0">{{ site.tagline }}</p>{% endif %}
         </div>
     </div>
