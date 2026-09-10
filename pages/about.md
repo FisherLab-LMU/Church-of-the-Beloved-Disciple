@@ -6,7 +6,7 @@ credits: true
 about-featured-image: cbd0005
 position: bottom
 heading: The Church of the Beloved Disciple Archive
-sub-heading: An open-access scholarly digital archive drawn from the Church of the Beloved Disciple physical collection documenting LGBTQ religious life in New York City, ca. 1968–1986
+sub-heading: An open-access scholarly digital archive
 padding: 6em
 ---
 
