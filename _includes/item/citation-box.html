@@ -1,5 +1,5 @@
 {% comment %}
-    Displays the preferred citation and a link to the item page.
+    Displays the preferred citation and reference link for an item.
 {% endcomment %}
 
 <div class="card">
@@ -14,12 +14,14 @@
                 {% endif %}
                 The Church of the Beloved Disciple Archive,
                 {{ site.organization-name | escape }}.
+                <a href="{{ page.url | absolute_url | escape }}">
+                    {{ page.url | absolute_url | escape }}</a>.
             </dd>
 
             <dt>Reference Link:</dt>
             <dd>
-                <a href="{{ page.url | absolute_url }}">
-                    {{ page.url | absolute_url }}
+                <a href="{{ page.url | absolute_url | escape }}">
+                    {{ page.url | absolute_url | escape }}
                 </a>
             </dd>
         </dl>
