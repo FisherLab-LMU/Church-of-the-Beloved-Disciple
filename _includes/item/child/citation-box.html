@@ -1,16 +1,27 @@
 {% comment %}
+    Displays the preferred citation and a direct link to a child item.
+{% endcomment %}
 
-    Adds a basic citation box for child item with reference link to the child page.
-
-{%- endcomment -%}
 <div class="card mb-2">
     <div class="card-header">Source</div>
     <div class="card-body">
         <dl>
             <dt>Preferred Citation:</dt>
-            <dd>"{{ child.title | default: page.title }}", {{ site.title }}, {{ site.organization-name }}</dd>
+            <dd>
+                “{{ child.title | default: page.title | strip_html | escape }}.”
+                {% if child.objectid %}
+                Item {{ child.objectid | escape }}.
+                {% endif %}
+                The Church of the Beloved Disciple Archive,
+                {{ site.organization-name | escape }}.
+            </dd>
+
             <dt>Reference Link:</dt>
-            <dd>{{ page.url | absolute_url }}#{{ child.objectid }}</dd>
+            <dd>
+                <a href="{{ page.url | absolute_url }}#{{ child.objectid | escape }}">
+                    {{ page.url | absolute_url }}#{{ child.objectid | escape }}
+                </a>
+            </dd>
         </dl>
     </div>
 </div>
