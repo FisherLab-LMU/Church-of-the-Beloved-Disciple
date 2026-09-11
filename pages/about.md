@@ -3,11 +3,6 @@ title: About the Archive
 layout: about
 permalink: /about.html
 credits: true
-about-featured-image: cbd0005
-position: bottom
-heading: The Church of the Beloved Disciple Archive
-sub-heading: An open-access scholarly digital archive
-padding: 6em
 ---
 
 ## About the Archive
