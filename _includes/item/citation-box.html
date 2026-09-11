@@ -1,16 +1,27 @@
 {% comment %}
+    Displays the preferred citation and a link to the item page.
+{% endcomment %}
 
-    Adds a basic citation box for the item with reference link to the item page.
-
-{%- endcomment -%}
 <div class="card">
     <div class="card-header">Source</div>
     <div class="card-body">
         <dl>
             <dt>Preferred Citation:</dt>
-            <dd>"{{ page.title }}", {{ site.title }}, {{ site.organization-name }}</dd>
+            <dd>
+                “{{ page.title | strip_html | escape }}.”
+                {% if page.objectid %}
+                Item {{ page.objectid | escape }}.
+                {% endif %}
+                The Church of the Beloved Disciple Archive,
+                {{ site.organization-name | escape }}.
+            </dd>
+
             <dt>Reference Link:</dt>
-            <dd>{{ page.url | absolute_url }}</dd>
+            <dd>
+                <a href="{{ page.url | absolute_url }}">
+                    {{ page.url | absolute_url }}
+                </a>
+            </dd>
         </dl>
     </div>
 </div>
